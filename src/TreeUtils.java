@@ -44,8 +44,21 @@ public class TreeUtils {
      */
     public static List<BinaryTreeNode> nextLevel(List<BinaryTreeNode> level) {
 		// Your code here
-    	if 
-		return null;
+    	
+    	List<BinaryTreeNode> list = level;
+    	List<BinaryTreeNode> list2 = new ArrayList<BinaryTreeNode>();
+      	
+    	for (int i = 0; i<list.size(); i++){
+    		if (list.get(i)==null){
+    			list2.add(BinaryTreeNode.EMPTY_NODE);
+    		}
+    		else{
+    				if (list.get(i).hasLeft()){list2.add(list.get(i).getLeft());}
+    				if (list.get(i).hasRight()){list2.add(list.get(i).getRight());}
+    		}
+    		
+    	}
+    	return list2;
     }
     
     /**
@@ -53,7 +66,8 @@ public class TreeUtils {
      */
     public static boolean isPlaceHolder(BinaryTreeNode node) {
 		// Your code here
-		return false;
+    	if (node == BinaryTreeNode.EMPTY_NODE){ return true;}
+    	else{return false;}
     }
     
 }
