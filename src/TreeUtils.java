@@ -28,7 +28,7 @@ public class TreeUtils {
      */
     public static List<BinaryTreeNode> levelZero(BinaryTreeNode tNode) {
         // Your code here
-    	ArrayList<BinaryTreeNode> list = new ArrayList<BinaryTreeNode>();
+    	List<BinaryTreeNode> list = new ArrayList<BinaryTreeNode>();
     	list.add(tNode);
     	return list;
     }
