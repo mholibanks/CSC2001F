@@ -11,13 +11,15 @@ public class TreeUtils {
     /**
      * Determine whether one tree node structure is similar (has the same structure) as another.
      */
-	BinaryTreeNode treeStruct1, treeStruct2;
 	
     public static boolean similar(BinaryTreeNode treeStructOne, BinaryTreeNode treeStructTwo) {
 		// Your code here
-		this.treeStruct1 = treeStructOne;
-		this.treeStruct2 = treeStructTwo;
-		
+		if (treeStructOne == null && treeStructTwo ==null ){ return true; }
+		else if (treeStructOne == null && treeStructTwo!= null){ return false;}
+		else if (treeStructOne!=null && treeStructTwo == null){ return false;}
+		else if(treeStructOne.getHeight()!=treeStructTwo.getHeight()){ return false;}
+
+		return similar(treeStructOne.getLeft(),treeStructTwo.getLeft()) && similar(treeStructOne.getRight(), treeStructTwo.getRight());
 		
     }
     
@@ -26,7 +28,9 @@ public class TreeUtils {
      */
     public static List<BinaryTreeNode> levelZero(BinaryTreeNode tNode) {
         // Your code here
-		return null;
+    	ArrayList<BinaryTreeNode> list = new ArrayList<BinaryTreeNode>();
+    	list.add(tNode);
+    	return list;
     }
     
     
@@ -40,6 +44,7 @@ public class TreeUtils {
      */
     public static List<BinaryTreeNode> nextLevel(List<BinaryTreeNode> level) {
 		// Your code here
+    	if 
 		return null;
     }
     
